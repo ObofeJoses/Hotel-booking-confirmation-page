@@ -5,6 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Hompage</title>
         <link rel="icon" type="image/png" href="/assets/images/favicon-32x32.png">
+        <link rel="stylesheet" href="styles.css">
     </head>
     <body>
         <div class="dashboard-container">
@@ -25,7 +26,7 @@
                 <!-- MAIN NAVIGATION LINKS -->
                 <nav class="sidebar-nav">
                     <ul>
-                        <li><a href="#"><img src="/assets/images/icon-bed.svg" class="nav-icon nav-item-active" alt="your stay icon" >Your stay <span>1</span></a></li>
+                        <li class="nav-item-active"><a href="#"><img src="/assets/images/icon-bed.svg" class="nav-icon " alt="your stay icon" >Your stay <span class="nav-badge">1</span></a></li>
                         <li><a href="#"><img src="/assets/images/icon-house.svg" class="nav-icon" alt="The house icon">The house </a></li>
                         <li><a href="#"><img src="/assets/images/icon-pin.svg" class="nav-icon" alt="Around Town icon">Around Town</a></li>
                         <li><a href="#"><img src="/assets/images/icon-breakfast-outline.svg" class="nav-icon" alt="Breakfast icon">Breakfast</a></li>
@@ -37,8 +38,8 @@
                 <footer class="sidebar-footer">
                     <div class="weather-widget">
                         <span class="weather-meta">TODAY  IN CASSIS</span> 
-                        <img src="/assets/images/icon-weather.svg" alt="weather icon">
-                        <strong class="temperature">27°</strong> 
+                        <img src="/assets/images/icon-weather.svg" alt="weather icon"><br>
+                        <strong class="temperature">27°</strong> <br>
                         <span class="weather-description">Sunny · light breeze</span>
                     </div>
                     <address>
@@ -71,18 +72,18 @@
                 <!-- this is the first card (RECIEPT CARD)-->
                     <div class="card receipt-card">
                         <div class="receipt-header">
-                            <h2>Receipt <span class="serial">No. MS-2026<br>0421-AH</span></h2>
+                            <h2>RECEIPT <span class="serial">No. MS-2026<br>0421-AH</span></h2>
                             <h3>Your Stay</h3>   
                         </div>
                         
                         <div class="receipt-body">
                             <!-- check in and check out constainer -->
-                            <div>
-                                <div class="dates-block">
-                                    <p>CHECK IN<br><span class="stay-dates"> 25 Apr</span> <br>Saturday  15:00</p>
+                            <div class="receipt-dates">
+                                <div class="date-block">
+                                    <p>CHECK IN<br><span class="stay-dates"> 25 Apr</span class="stay-time"> <br>Saturday  15:00</p>
                                 </div>
-                                <div>
-                                    <p>CHECK OUT<br><span class="stay-dates"> 29 Apr</span> <br>Wednesday  11:00</p>
+                                <div class="date-block">
+                                    <p>CHECK OUT<br><span class="stay-dates"> 29 Apr</span class="stay-time"> <br>Wednesday  11:00</p>
                                 </div>
                             </div>  
                             <!-- items bought        -->
@@ -108,7 +109,7 @@
                         </div>
                         <div class="welcome-card-body">
                             <span class="little-note">A note from your host,</span>
-                            <span class="customer-name">Margaux</span>
+                            <span class="customer-name">Margaux.</span>
                             <p class="welcome-text">We're so glad you're coming. The shutters will be open,
                             <br>the lemonade cold, and the cat - Poivre - pretending 
                             <br> not to notice you.
@@ -125,7 +126,7 @@
             <!-- this is the container for the arrival, wifi and breakfast details(BOTTOM INFO GRID) -->
                 <section class="info-grid">
                     <!-- this is the third card(arrival card) -->
-                    <div class="info-card">
+                    <div class="info-card arrival-card">
                         <div class="info-card-header"><img src="/assets/images/icon-key.svg" alt="key image" class="info-icon"><h2><strong>ARRIVAL</strong> <span class="num">01</span></h2></div>
                         <div class="info-card-body">
                             <h3>Check-in from <span>15:00</span></h3>
@@ -134,19 +135,19 @@
                         </div>
                     </div>
                     <!-- this is the fourth card (wifi-card)-->
-                    <div class="info-card">
+                    <div class="info-card wifi-card">
                         <div class="info-card-header"><img src="/assets/images/icon-wifi.svg" alt="wifi image" class="info-icon"><h2><strong>WIFI</strong> <span class="num">02</span></h2></div>
                         <div class="info-card-body">
                             <h3>Le Soleil. Guest</h3>
                             <span>Password below</span>
                             <div class="wifi-field">
                                 <div><p>NETWORK <span>Le Soleil. Guest</span></p></div>
-                                <div><p>PASSWORD <span>soleil-2026 <button id="copy-wifi-password-btn">COPY</button></span></p></div>
+                                <div><p>PASSWORD <span> <span class="wifi-password">soleil-2026</span>  <button id="copy-wifi-password-btn">COPY</button></span></p></div>
                             </div>
                         </div>
                     </div>
                     <!-- this is the fifth card(breafast-card )-->
-                    <div class="info-card">
+                    <div class="info-card breakfast-card">
                         <div class="info-card-header"><img src="/assets/images/icon-breakfast.svg" alt="breakfast image" class="info-icon"><h2><strong>BREAKFAST</strong> <span class="num">03</span></h2></div>
                         <div class="info-card-body">
                             <h3>Served 8-10:30</h3>
