@@ -1,118 +1,161 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hompage</title>
-    <link rel="icon" type="image/png" href="/assets/images/favicon-32x32.png"
-</head>
-<body>
-    <aside>
-        <a href="#"><img src="/assets/images/logo.svg" alt="Hotel logo"></a>
-        <hr>
-        <nav>
-            <ul>
-                <li><img src="" alt="your stay icon"><a href="#">Your stay <span>1</span></a></li>
-                <li><img src="" alt="The house icon"><a href="#">The house </a></li>
-                <li><img src="" alt="Around Town icon"><a href="#">Around Town</a></li>
-                <li><img src="" alt="Breakfast icon"><a href="#">Breakfast</a></li>
-                <li><img src="" alt="Messages icon"><a href="#">Messages</a></li>
-            </ul>
-        </nav>
-        <div class="weather-widget">
-            <div class="weather-info">
-                <h3>TODAY  IN CASSIS</h3> 
-                <span>27°</span> 
-                <p>Sunny · light breeze</p>
-            </div>
-        </div>
-        <footer>
-            <p>Est. 1987 
-            <br>Maison Soleil · 12 Rue des 
-            <br>Oliviers · Cassis 
-            <br>© 2026 Maison Soleil</p>
-        </footer>
-    </aside>
-    <main>
-        <header>
-            <p>Booking · Confirmed</p>
-            <h1>Bienvenue, <span>Lucia</span></h1>
-            <button>Print receipt</button>
-            <button>Add to calendar</button>
-        </header>
-        <section>
-        <!-- this is the first card -->
-            <div class="receipt">
-                <div>
-                    <h2>Receipt <span>No. MS-2026<br>0421-AH</span></h2>
-                    <h3>Your Stay</h3>   
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Hompage</title>
+        <link rel="icon" type="image/png" href="/assets/images/favicon-32x32.png">
+    </head>
+    <body>
+        <div class="dashboard-container">
+            <!-- SIDEBAR -->
+            <aside class="sidebar" id="mobile-menu">
+                <!-- LOGO AREA IN THE HEADER -->
+                <div class="sidebar-header">
+                    <a href="#"><img src="/assets/images/logo.svg" alt="Hotel logo"></a>
+                    <!-- MENU BOTTOM -->
+                    <button type="button" class="menu-toggle" id="menu-toggle-btn">
+                        <img src="/assets/images/icon-menu.svg" alt="Menu Icon">
+                    </button>
+                    <button type="button" class="menu-close" id="menu-close-btn">
+                        <img src="/assets/images/icon-close.svg" alt="Close Menu Icon">
+                    </button>
                 </div>
-                <div>
-                    <div>
-                        <p>CHECK IN<span> 25 Apr</span> Saturday  15:00</p>
-                        <p>CHECK OUT<span> 29 Apr</span> Wednesday  11:00</p>
-                    </div>                   
-                    <div>
-                        <h3>Room · La Garrigue * 4 nights <span>€ 620.00</span></h3>
-                        <h3>Breakfast* 2 guests <span>€ 96.00</span></h3>
-                        <h3>Tourist tax <span>€ 14.00</span></h3> 
+                        
+                <!-- MAIN NAVIGATION LINKS -->
+                <nav class="sidebar-nav">
+                    <ul>
+                        <li><a href="#"><img src="/assets/images/icon-bed.svg" class="nav-icon nav-item-active" alt="your stay icon" >Your stay <span>1</span></a></li>
+                        <li><a href="#"><img src="/assets/images/icon-house.svg" class="nav-icon" alt="The house icon">The house </a></li>
+                        <li><a href="#"><img src="/assets/images/icon-pin.svg" class="nav-icon" alt="Around Town icon">Around Town</a></li>
+                        <li><a href="#"><img src="/assets/images/icon-breakfast-outline.svg" class="nav-icon" alt="Breakfast icon">Breakfast</a></li>
+                        <li><a href="#"><img src="/assets/images/icon-mail.svg" class="nav-icon" alt="Messages icon">Messages</a></li>
+                    </ul>               
+                </nav>
+
+                <!-- SIDEBAR FOOTER -->
+                <footer class="sidebar-footer">
+                    <div class="weather-widget">
+                        <span class="weather-meta">TODAY  IN CASSIS</span> 
+                        <img src="/assets/images/icon-weather.svg" alt="weather icon">
+                        <strong class="temperature">27°</strong> 
+                        <span class="weather-description">Sunny · light breeze</span>
                     </div>
-                </div>
-                <div>
-                    <h3>TOTAL PAID <span>€ 730.00</span></h3>
-                    <p>Paid · Wise · GBP<span> </span></p>
-                </div>
-            </div>
-            
-        <!-- this is the second card     -->
-            <div class="welcome-card">
-                <div>
-                    <h2>WELCOME CARD</h2>
-                    <img src="">
+                    <address>
+                        Est. 1987 
+                        <br>Maison Soleil · 12 Rue des Oliviers · Cassis
+                    </address> 
+                    <p class="copyright">© 2026 Maison Soleil</p>
+                </footer>
+            </aside>
 
-                </div>
-                <div>
-                    <span>A note from your host,</span>
-                    <span>Margaux</span>
-                    <p>We're so glad you're coming. The shutters will be open, the lemonade cold, and the cat - Poivre - pretending not to notice you.</p>
-                </div>
-                <div>
-                    <span>ROOM</span>
-                    <span>La Garrigue</span>
-                </div>
-            </div>
-        </section>
-        <section>
-            <!-- this is the third card -->
-            <div class="arrival-card">
-                <div><img src=""><h2>ARRIVAL <span>01</span></h2></div>
-                <div>
-                    <h3>Check-in from</h3>
-                    <span>Sat,25 April</span>
-                    <p>Ring the brass bell by the blue door. If we're at the market, the key is in the terracotta pot by the olive tree. </p>
-                </div>
-            </div>
-            <!-- this is the fourth card -->
-            <div class="wifi-card">
-                <div><img src=""><h2>WIFI <span>02</span></h2></div>
-                <div>
-                    <h3>Le Soleil. Guest</h3>
-                    <span>Password below</span>
-                    <div><p>NETWORK <span>Le Soleil. Guest</span></p></div>
-                    <div><p>PASSWORD <span>soleil-2026 <button>COPY</button></span></p></div></div>
-                </div>
-            <!-- this is the fifth card -->
-            </div>
-            <div class="breakfast-card">
-                <div><img src=""><h2>BREAKFAST <span>03</span></h2></div>
-                <div>
-                    <h3>Served 8-10:30</h3>
-                    <span>On the terrace</span>
-                    <p> Fresh figs, Marseille honey, pain au levain, and espresso. Gluten-free option? Leave a note the night before. </p>
-                </div>
-            </div>
-        </section>       
-    </main>
+            <!-- ENTIRE CONTENT BODY -->
+            <main class="main-content">
 
-</body>
+                <!-- WELCOME HEADER WITH THE QUICK ACTION BUTTONN -->
+                <header class="content-header">
+                    <div class="welcome-text">
+                        <span class="status-badge">Booking · Confirmed</span>
+                        <h1>Bienvenue, <span class="highlight-for-heading">Lucia</span></h1>
+                    </div>
+                    
+                    <div class="action-buttons">
+                        <button type="button" class="btn btn-secondary" id="print-receipt-btn">Print receipt</button>
+                        <button type="button" class="btn btn-primary" id="add-to-calendar-btn">Add to calendar</button>
+                    </div>
+                    
+                </header>
+
+                <!-- INTERACTIVE FANNING CARDS SECTION -->
+                <section class="fanning-cards-wrapper">
+                <!-- this is the first card (RECIEPT CARD)-->
+                    <div class="card receipt-card">
+                        <div class="receipt-header">
+                            <h2>Receipt <span class="serial">No. MS-2026<br>0421-AH</span></h2>
+                            <h3>Your Stay</h3>   
+                        </div>
+                        
+                        <div class="receipt-body">
+                            <!-- check in and check out constainer -->
+                            <div>
+                                <div class="dates-block">
+                                    <p>CHECK IN<br><span class="stay-dates"> 25 Apr</span> <br>Saturday  15:00</p>
+                                </div>
+                                <div>
+                                    <p>CHECK OUT<br><span class="stay-dates"> 29 Apr</span> <br>Wednesday  11:00</p>
+                                </div>
+                            </div>  
+                            <!-- items bought        -->
+                            <div class="receipt-items">
+                                <h3>Room · La Garrigue * 4 nights <span>€ 620.00</span></h3>
+                                <h3>Breakfast* 2 guests <span>€ 96.00</span></h3>
+                                <h3>Tourist tax <span>€ 14.00</span></h3> 
+                            </div>
+                        </div>
+                        <!-- receipt footer -->
+                        <div class="receipt-footer">
+                            <h3>TOTAL PAID <span>€ 730.00</span></h3>
+                            <p>Paid · Wise · GBP<span> <img src="/assets/images/icon-barcode.svg" alt="barcode"> </span></p>
+                        </div>
+                    </div>
+                    
+                <!-- this is the second card (HOST CARD)    -->
+                    <div class="card welcome-card">
+                        <div class="welcome-card-header">
+                            <h2>WELCOME CARD</h2>
+                            <img src="/assets/images/icon-sun.svg" alt="sun image">
+
+                        </div>
+                        <div class="welcome-card-body">
+                            <span class="little-note">A note from your host,</span>
+                            <span class="customer-name">Margaux</span>
+                            <p class="welcome-text">We're so glad you're coming. The shutters will be open,
+                            <br>the lemonade cold, and the cat - Poivre - pretending 
+                            <br> not to notice you.
+                            </p>
+                        </div>
+                        <div class="welcome-card-footer">
+                            <span>ROOM</span>
+                            <span>La Garrigue</span>
+                        </div>
+                    </div>
+                </section>
+
+
+            <!-- this is the container for the arrival, wifi and breakfast details(BOTTOM INFO GRID) -->
+                <section class="info-grid">
+                    <!-- this is the third card(arrival card) -->
+                    <div class="info-card">
+                        <div class="info-card-header"><img src="/assets/images/icon-key.svg" alt="key image" class="info-icon"><h2><strong>ARRIVAL</strong> <span class="num">01</span></h2></div>
+                        <div class="info-card-body">
+                            <h3>Check-in from <span>15:00</span></h3>
+                            <span>Sat,25 April</span>
+                            <p>Ring the brass bell by the blue door. If we're at <br> the market, the key is in the terracotta pot by <br>the olive tree. </p>
+                        </div>
+                    </div>
+                    <!-- this is the fourth card (wifi-card)-->
+                    <div class="info-card">
+                        <div class="info-card-header"><img src="/assets/images/icon-wifi.svg" alt="wifi image" class="info-icon"><h2><strong>WIFI</strong> <span class="num">02</span></h2></div>
+                        <div class="info-card-body">
+                            <h3>Le Soleil. Guest</h3>
+                            <span>Password below</span>
+                            <div class="wifi-field">
+                                <div><p>NETWORK <span>Le Soleil. Guest</span></p></div>
+                                <div><p>PASSWORD <span>soleil-2026 <button id="copy-wifi-password-btn">COPY</button></span></p></div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- this is the fifth card(breafast-card )-->
+                    <div class="info-card">
+                        <div class="info-card-header"><img src="/assets/images/icon-breakfast.svg" alt="breakfast image" class="info-icon"><h2><strong>BREAKFAST</strong> <span class="num">03</span></h2></div>
+                        <div class="info-card-body">
+                            <h3>Served 8-10:30</h3>
+                            <span>On the terrace</span>
+                            <p> Fresh figs, Marseille honey, pain au levain, and espresso. Gluten-free option? Leave a note the night before. </p>
+                        </div>
+                    </div>
+                </section>       
+            </main>
+        </div>
+    </body>
 </html>
