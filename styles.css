@@ -129,7 +129,7 @@ button{
   display: none;
 }
 /* to toggle the side bar open and closed, we add a class to the sidebar container. When that class is present, we show the nav and footer, and hide the menu-toggle button. The menu-close button is shown instead. */
-/* .sidebar.is-open{
+.sidebar.is-open{
   position: fixed;
   inset: 0;
   z-index: 50;
@@ -142,7 +142,7 @@ button{
 }
 .sidebar.is-open .menu-toggle{ display: none; }
 .sidebar.is-open .menu-close{ display: flex; }
- */
+
 
 
 .sidebar-nav{
@@ -623,6 +623,77 @@ button{
   color: var(--ink-soft);
   /* hover/focus/.copied states come in the interactive-states step */
 }
+.copy-btn:hover,
+.copy-btn:focus-visible{
+  border-color: var(--rust);
+  color: var(--rust);
+  outline: none;
+}
+.copy-btn:active{
+  background: var(--rust-tint);
+}
+.copy-btn.copied{
+  border-color: var(--rust);
+  color: var(--rust);
+  background: var(--rust-tint);
+}
+
+.action-buttons{
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-shrink: 0;
+}
+
+.action-buttons > * {
+  flex: 1;
+  text-align: center;
+}
+
+
+.btn{
+  padding: 10px 20px;
+  border-radius: 999px;
+  font-family: 'DM Sans', sans-serif;
+  font-size: .84rem;
+  font-weight: 600;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: transform .12s ease, background-color .15s ease, border-color .15s ease, box-shadow .15s ease;
+}
+.btn:active{
+  transform: translateY(1px) scale(.99);
+}
+
+.btn-secondary{
+  background: transparent;
+  border: 1px solid var(--line);
+  color: var(--ink);
+}
+.btn-secondary:hover{
+  border-color: var(--ink);
+  background: #fff;
+}
+.btn-secondary:focus-visible{
+  outline: 2px solid var(--rust);
+  outline-offset: 2px;
+}
+
+.btn-primary{
+  background: var(--ink);
+  border: 1px solid var(--ink);
+  color: #fff;
+}
+.btn-primary:hover{
+  background: var(--rust-dark);
+  border-color: var(--rust-dark);
+  box-shadow: var(--shadow-soft);
+}
+.btn-primary:focus-visible{
+  outline: 2px solid var(--rust);
+  outline-offset: 2px;
+}
+
 
 /* fix content overflow on mobile devices by ensuring that certain elements can shrink below their content width if necessary. This prevents horizontal scrolling and keeps the layout responsive. */
 .info-card,
@@ -678,7 +749,7 @@ button{
     position: relative;
     flex-direction: row;
     height: 420px;
-    max-width: 760px;
+    max-width: 700px;
     margin: 0 auto 40px;
     align-items: center;
     justify-content: center;
@@ -688,22 +759,23 @@ button{
     width: 400px;
   }
   .receipt-card{
-    left: 42%;
-    transform: translateX(calc(-50% - 95px)) rotate(-6deg);
+    left: 10%;
+    transform: rotate(-6deg);
     z-index: 1;
     
   }
   .welcome-card{
-    left: 70%;
-    transform: translateX(calc(-50% + 95px)) rotate(6deg);
+    right: 10%;
+    transform:  rotate(6deg);
     z-index: 2;
   }
-   .fanning-cards-wrapper:hover .receipt-card{
-    transform: translateX(calc(-50% - 170px)) rotate(-11deg);
-  }
+   /* .fanning-cards-wrapper:hover .receipt-card{
+    transform: translateX(calc(-50% - 10px)) rotate(-11deg);
+  } */
   .fanning-cards-wrapper:hover .welcome-card{
-    transform: translateX(calc(-50% + 170px)) rotate(11deg);
-  }
+    transform:  rotate(11deg);
+  
+  } 
 
   /* --- info grid: 1 column to 3 --- */
   .info-grid{
