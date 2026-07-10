@@ -14,48 +14,36 @@
 | `--gold-2` | Rich gold highlight |
 | `--blue` | Information/link color |
 | `--pink` | Decorative/accent color | */
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,400;1,400&family=DM+Sans:wght@400;500;600&family=DM+Mono:wght@400;500&display=swap');
 :root{
   /* COLORS */
-  --cream: #FAF5EE;  /* Warm off-white page background.Soft, clean, and easy on the eyes. */
-  --cream-card: #FCFAF5; /* Slightly brighter cream used for cards,containers, and content sections. */
-  
-  /* text colours */
-  --ink: #2A241E; /* Main text color.*/
-  --ink-soft: #8F8576; /* Secondary text color.*/
-  --ink-softer: #B7AE9F;/* Muted text color.*/
+  --cream: #FBF6EF;
+  --cream-card: #FDFBF7;
 
-  --line: rgba(42,36,30,0.10); /* Light divider and border color.*/
+  --ink: #2C2721;
+  --ink-soft: #594B3B;
+  --ink-softer: #7A6A57;
 
-  --rust: #BC431C; /* Primary accent color.Warm rust-orange used for buttons and call-to-actions. */
-  --rust-light: #C4602F;/* Lighter rust.Perfect for hover states and highlights. */
-  --rust-dark: #8E3419; /* Dark rust.Used for active states, shadows, or emphasis. */
-  --rust-tint: #F3DED2; /* Very light rust tint.Suitable for badges, alerts, and soft backgrounds. */
+  --line: #E3DDD3;
 
-  /* Light golden yellow.
-     Gives a premium, warm, welcoming feel. */
-  --gold-1: #F6DE95;
-  /* Richer gold tone.
-     Often paired with gold-1 in gradients. */
-  --gold-2: #ECC873;
+  --rust: #B6421B;
+  --rust-light: #C25A2E;
+  --rust-dark: #9F3E1D;
+  --rust-tint: #F2DDD6;
 
-  /* Calm royal blue.
-     Good for links, informational elements, and trust indicators. */
-  --blue: #5668CA;
+  --gold-1: #F5D88A;
+  --gold-2: #EDB73B;
 
-  /* Warm rose-pink.
-     Great for accents, tags, and decorative elements. */
-  --pink: #C14972;
+  --blue: #586AC6;
+  --pink: #BF4A71;
 
   /* RADII */
-
-  
-  --radius-sm: 10px;/* Small rounded corners. */
-  --radius-md: 16px; /* Medium rounded corners. */
-  --radius-lg: 22px; /* Large rounded corners. */
+  --radius-sm: 10px;
+  --radius-md: 16px;
+  --radius-lg: 22px;
 
   /* SHADOWS */
-  
-  --shadow-soft: 0 10px 25px -12px rgba(80,55,30,0.18);/* Soft subtle shadow for buttons and small components. */
+  --shadow-soft: 0 10px 25px -12px rgba(80,55,30,0.18);
   --shadow-card: 0 20px 45px -20px rgba(80,55,30,0.28);/* Deeper shadow for cards, modals, and elevated panels. */
 }
 
@@ -68,7 +56,7 @@ body{
   color: var(--ink);
   background: var(--cream);
 }
-}
+
 h1, h2, h3, body, p, ul, li, html, body, address {
     margin: 0;
     padding: 0;
@@ -91,13 +79,12 @@ button{
 }
 
 .sidebar{
-  background: lightblue; /* TEMP — remove in step 5 */
-  padding: 16px;
+  padding: 20px;
 }
 
 .main-content{
-  background: lightyellow; /* TEMP — remove in step 5 */
-  padding: 16px;
+  /* background: lightyellow; TEMP — remove in step 5 */
+  padding: 26px 20px 44px;
 }
 
 /* Sidebar Navigation */
@@ -112,9 +99,51 @@ button{
 
 /* these two buttons are mobile-only controls — hidden until
    we reach the mobile-menu step, so they don't clutter things now */
-.menu-toggle, .menu-close{
+/* .menu-toggle, .menu-close{
+  display: none;
+} */
+.menu-toggle{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  margin-left: auto;
+}
+.menu-close{
+  display: none;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  margin-left: auto;
+}
+
+.menu-toggle img, .menu-close img{ width: 24px; height: 24px; }
+
+.sidebar-nav, .sidebar-footer{
   display: none;
 }
+/* to toggle the side bar open and closed, we add a class to the sidebar container. When that class is present, we show the nav and footer, and hide the menu-toggle button. The menu-close button is shown instead. */
+/* .sidebar.is-open{
+  position: fixed;
+  inset: 0;
+  z-index: 50;
+  background: var(--cream);
+  overflow-y: auto;
+}
+.sidebar.is-open .sidebar-nav,
+.sidebar.is-open .sidebar-footer{
+  display: block;
+}
+.sidebar.is-open .menu-toggle{ display: none; }
+.sidebar.is-open .menu-close{ display: flex; }
+ */
+
 
 .sidebar-nav{
   margin-bottom: 24px;
@@ -248,12 +277,13 @@ button{
 }
 
 
-/* receipt card  */
+/* Fanning cards wrapper  */
 .fanning-cards-wrapper{
   display: flex;
   flex-direction: column;
   gap: 50px;
   margin-bottom: 36px;
+  margin-top: 36px;
 }
 
 .card{
@@ -261,7 +291,8 @@ button{
   box-shadow: var(--shadow-card);
   padding: 24px;
 }
-
+/*remember  to rotate each card in the fanning cards wrapper, and add a hover effect to the top card. The rotation and hover effect will be handled in the next step, so for now, just make sure the cards are stacked on top of each other with a gap between them.*/
+/* RECEIPT CARD */
 .receipt-card{
   background: var(--cream-card);
 }
@@ -271,11 +302,12 @@ button{
 }
 
 
+
 .receipt-header h2{
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
-  font-family: 'Instrument Serif', serif;
+  font-family: 'Fraunces', serif;
   font-weight: 400;
   font-size: 0.775rem;
   margin-bottom: 0px;
@@ -285,11 +317,11 @@ button{
   text-transform: uppercase;
   letter-spacing: .08em;
   font-size: .6rem;
-  font-family: 'Inter', sans-serif;
+  font-family: 'DM Mono', sans-serif;
   color: var(--ink-soft);
 }
 .receipt-header h3{
-  font-family: 'Instrument Serif', serif;
+  font-family: 'Fraunces', serif;
   font-weight: 400;
   font-size: 1.35rem;
   margin-top: 0px;
@@ -320,7 +352,7 @@ button{
  }
 .stay-dates{
   display: inline-block;
-  font-family: 'Instrument Serif', serif;
+  font-family: 'Fraunces', serif;
   font-size: 1.65rem;
   text-transform: none;
   letter-spacing: normal;
@@ -353,7 +385,7 @@ button{
 }
 
 .receipt-footer{
-  border-top: 1px dashed var(--line);
+  border-top: 2px solid var(--line);
   padding-top: 11px;
 }
 .receipt-footer h3{
@@ -368,7 +400,7 @@ button{
   font-weight: 700;
 }
 .receipt-footer h3 span{
-  font-family: 'Instrument Serif', serif;
+  font-family: 'Fraunces', serif;
   font-size: 1.55rem;
   font-weight: 400;
   color: var(--ink);
@@ -398,8 +430,9 @@ button{
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
-  margin-bottom: 56px;
+  margin-bottom: 36px;
   border-top: 1px dashed var(--line);
+  padding-top: 8px;
 }
 .welcome-card-header h2{
   text-transform: uppercase;
@@ -414,13 +447,13 @@ button{
 }
 
 .welcome-card-body{
-  margin-bottom: 110px;
-  margin-top: 50px;
+  margin-bottom: 70px;
+  margin-top: 34px;
 }
 .little-note{
   display: block; 
   text-transform: none;
-  font-family: 'Inter', sans-serif;
+  font-family: 'DM Sans', sans-serif;
   font-style: italic;
   letter-spacing: .1em;
   font-size: .875rem;
@@ -454,9 +487,21 @@ button{
   margin-bottom: 2px;
 }
 .welcome-card-footer span:last-child{
-  font-family: 'Instrument Serif', serif;
+  font-family: 'Fraunces', serif;
   font-size: 1.45rem;
 }
+
+
+/* to rotate the cards */
+ .receipt-card{
+    
+    transform:  rotate(-6deg);
+    
+    
+  }
+  .welcome-card{
+    transform:  rotate(6deg);
+  }
 /* 
  Info grid (Arrival / Wifi / Breakfast) */
 
@@ -500,7 +545,7 @@ button{
 }
 
 .num{
-  font-family: 'Instrument Serif', serif;
+  font-family: 'Fraunces', serif;
   font-size: 1.45rem;
   color: var(--ink-softer);
   font-weight: 400;
@@ -523,7 +568,7 @@ button{
 .breakfast-card h2 strong{ color: var(--pink); }
 
 .info-card-body h3{
-  font-family: 'Instrument Serif', serif;
+  font-family: 'Fraunces', serif;
   font-weight: 400;
   font-size: 1.35rem;
   margin-bottom: 4px;
@@ -561,6 +606,7 @@ button{
   gap: 8px;
   text-transform: none;
   letter-spacing: normal;
+  font-family: 'DM Mono', monospace;
   font-size: .78rem;
   font-weight: 600;
   color: var(--ink);
@@ -576,4 +622,92 @@ button{
   text-transform: uppercase;
   color: var(--ink-soft);
   /* hover/focus/.copied states come in the interactive-states step */
+}
+
+/* fix content overflow on mobile devices by ensuring that certain elements can shrink below their content width if necessary. This prevents horizontal scrolling and keeps the layout responsive. */
+.info-card,
+.receipt-header h2,
+.receipt-items h3,
+.receipt-footer h3,
+.info-card-header h2,
+.wifi-field p,
+.wifi-field p span,
+.content-header,
+.welcome-text,
+.action-buttons{
+  min-width: 0;
+}
+
+/* desktop view */
+@media (min-width: 900px){
+
+  /* make sidebar fixed */
+  .dashboard-container{
+    display: grid;
+    grid-template-columns: 248px 1fr;
+  }
+  .sidebar{
+    border-right: 1px solid var(--line);
+    padding: 28px 22px;
+  }
+
+  /*disable the mobile menu toggle buttons on desktop, since the sidebar is always visible */
+  .menu-toggle, .menu-close{ display: none; }
+
+   .sidebar-nav, .sidebar-footer{ display: block; }
+  .sidebar.is-open{
+    position: static;
+    inset: auto;
+    background: none;
+    overflow-y: visible;
+  }
+
+  .main-content{
+    padding: 36px 40px 60px;
+    max-width: 1100px;
+  }
+  .content-header{
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 20px;
+  }
+
+  /* switch fanning cards to a horizontal layout on desktop, with a gap between them. The cards will fan out slightly when hovered over, but that effect will be added in the next step. For now, just make sure they are laid out horizontally with a gap. */
+  .fanning-cards-wrapper{
+    position: relative;
+    flex-direction: row;
+    height: 420px;
+    max-width: 760px;
+    margin: 0 auto 40px;
+    align-items: center;
+    justify-content: center;
+  }
+   .card{
+    position: absolute;
+    width: 400px;
+  }
+  .receipt-card{
+    left: 42%;
+    transform: translateX(calc(-50% - 95px)) rotate(-6deg);
+    z-index: 1;
+    
+  }
+  .welcome-card{
+    left: 70%;
+    transform: translateX(calc(-50% + 95px)) rotate(6deg);
+    z-index: 2;
+  }
+   .fanning-cards-wrapper:hover .receipt-card{
+    transform: translateX(calc(-50% - 170px)) rotate(-11deg);
+  }
+  .fanning-cards-wrapper:hover .welcome-card{
+    transform: translateX(calc(-50% + 170px)) rotate(11deg);
+  }
+
+  /* --- info grid: 1 column to 3 --- */
+  .info-grid{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+  }
 }
