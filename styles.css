@@ -52,7 +52,7 @@
 }
 
 body{
-  font-family: 'Inter', sans-serif;
+  font-family: 'DM Sans', sans-serif;
   color: var(--ink);
   background: var(--cream);
 }
@@ -79,12 +79,12 @@ button{
 }
 
 .sidebar{
-  padding: 20px;
+  padding: 12px 20px 0px;
 }
 
 .main-content{
   /* background: lightyellow; TEMP — remove in step 5 */
-  padding: 26px 20px 44px;
+  padding: 0px 20px 44px;
 }
 
 /* Sidebar Navigation */
@@ -93,7 +93,9 @@ button{
   display: flex;
   align-items: center;
   gap: 12px;
-  margin-bottom: 24px;
+  margin-bottom: 16px;
+  border-bottom: 1px solid;
+  padding-bottom: 12px;
 }
 .sidebar-header img{ height: 26px; width: auto; }
 
@@ -166,6 +168,7 @@ button{
 }
 .sidebar-nav a:hover{
   background: rgba(42,36,30,0.05);
+  border-color: 2px solid var(--rust);
 }
 .nav-icon{
   width: 18px;
@@ -196,6 +199,8 @@ button{
 .sidebar{
   display: flex;
   flex-direction: column;
+  margin-bottom: 0px;
+  
 }
 
 .sidebar-footer{
@@ -210,7 +215,7 @@ button{
   flex-direction: column;
   background: linear-gradient(160deg, var(--gold-1), var(--gold-2));
   border-radius: var(--radius-md);
-  padding: 16px 18px 18px;
+  padding: 8px 12px 8px;
   color: #4A3512;
   margin-bottom: 24px;
 }
@@ -244,7 +249,7 @@ button{
   /* z-index: 1; */
 }
 .temperature{
-  font-family: 'Instrument Serif', serif;
+  font-family: 'Fraunces', serif;
   font-weight: 400;
   font-size: 2.5rem;
   line-height: 1;
@@ -276,6 +281,38 @@ button{
   margin-top: 6px;
 }
 
+.content-header{
+  margin-bottom: 48px;
+}
+ .header-text{
+  margin-bottom: 20px; /* gap above the buttons when stacked on mobile */
+}
+
+.status-badge{
+  display: block;
+  text-transform: uppercase;
+  letter-spacing: .14em;
+  font-size: .72rem;
+  font-weight: 600;
+  color: var(--ink-soft);
+  margin-bottom: 6px;
+}
+
+.header-text h1{
+  font-family: 'DM Sans', sans-serif;
+  font-weight: 600;
+  font-size: 1.9rem;
+  line-height: 1.15;
+  letter-spacing: -0.01em;
+  color: var(--ink);
+}
+
+.highlight-for-heading{
+  font-family: 'Fraunces', serif;
+  font-style: italic;
+  font-weight: 400;
+  color: var(--rust);
+} 
 
 /* Fanning cards wrapper  */
 .fanning-cards-wrapper{
@@ -290,11 +327,15 @@ button{
   border-radius: var(--radius-lg);
   box-shadow: var(--shadow-card);
   padding: 24px;
+  max-width: 400px;
+  margin: 0 auto;
+  transition: transform .35s cubic-bezier(.2,.8,.2,1);
 }
 /*remember  to rotate each card in the fanning cards wrapper, and add a hover effect to the top card. The rotation and hover effect will be handled in the next step, so for now, just make sure the cards are stacked on top of each other with a gap between them.*/
 /* RECEIPT CARD */
 .receipt-card{
   background: var(--cream-card);
+  width: 100%;
 }
 
 .receipt-header{
@@ -375,7 +416,7 @@ button{
 .receipt-items h3{
   display: flex;
   justify-content: space-between;
-  font-family: 'Inter', sans-serif;
+  font-family: 'DM Sans', sans-serif;
   font-weight: 400;
   font-size: .8rem;
   padding: 3px 0;
@@ -430,7 +471,7 @@ button{
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
-  margin-bottom: 36px;
+  /* margin-bottom: 36px; */
   border-top: 1px dashed var(--line);
   padding-top: 8px;
 }
@@ -447,8 +488,8 @@ button{
 }
 
 .welcome-card-body{
-  margin-bottom: 70px;
-  margin-top: 34px;
+  margin-bottom: 54px;
+  margin-top: 26px;
 }
 .little-note{
   display: block; 
@@ -464,7 +505,7 @@ button{
 
 .customer-name{
   display: block;
-  font-family: 'Instrument Serif', serif;
+  font-family: 'Fraunces', serif;
   font-style: italic;
   font-size: 1.95rem;
   margin-bottom: 12px;
@@ -493,11 +534,8 @@ button{
 
 
 /* to rotate the cards */
- .receipt-card{
-    
-    transform:  rotate(-6deg);
-    
-    
+ .receipt-card{    
+    transform:  rotate(-6deg); 
   }
   .welcome-card{
     transform:  rotate(6deg);
@@ -510,22 +548,28 @@ button{
   display: flex;
   flex-direction: column;
   gap: 18px;
+  margin-top: 32px;
   margin-bottom: 32px;
-  
+  align-items: center;
+  padding-top: 20px;
 }
 
 .info-card{
   background: var(--cream-card);
   border: 1px solid var(--line);
   border-radius: var(--radius-md);
-  padding: 24px;
+  padding: 16px;
+  width: 100%;
+  gap: 16px;
+  max-width: 521px;
+  min-height: 182.09px;
 }
 
 .info-card-header{
   display: flex;
   align-items: center;
   gap: 10px;
-  margin-bottom: 8px;
+  /* margin-bottom: 8px; */
   padding: 0px;
 }
 .info-card-header h2{
@@ -534,12 +578,13 @@ button{
   justify-content: space-between;
   align-items: center;
   font-weight: 400;
-  margin:16px 0px;
+  margin:8px 0px;
+  font-size: .775rem;
 }
 .info-card-header h2 strong{
   text-transform: uppercase;
   letter-spacing: .12em;
-  font-size: .85rem;
+  font-size: .65rem;
   font-weight: 700;
 
 }
@@ -551,11 +596,19 @@ button{
   font-weight: 400;
 }
 .info-icon{
-  width: 40px;
-  height: 40px;
+  width: 30px;
+  height: 30px;
   padding: 8px;
   border-radius: 9px;
   box-sizing: border-box;
+}
+
+.info-subtitle{
+  display: block;
+  font-size: .625rem;
+  letter-spacing: .08em;
+  color: var(--ink-soft);
+  margin-bottom: 8px;
 }
 
 
@@ -570,25 +623,30 @@ button{
 .info-card-body h3{
   font-family: 'Fraunces', serif;
   font-weight: 400;
-  font-size: 1.35rem;
+  font-size: 1rem;
   margin-bottom: 4px;
 }
 
 .info-card-body > p{
-  font-size: .84rem;
+  font-size: 12px;
   line-height: 1.5;
 }
 
 .wifi-field{
   display: flex;
   flex-direction: column;
-  gap: 8px;
-  margin-top: 4px;
+  gap: 4px;
+  height: 61.43px
+  
+  /* align-items: stretch;
+  margin-top: 4px; */
 }
 .wifi-field > div{
   background: rgba(42,36,30,0.045);
   border-radius: 8px;
   padding: 4px 12px;
+  flex: 1;
+
 }
 
 .wifi-field p{
@@ -607,7 +665,7 @@ button{
   text-transform: none;
   letter-spacing: normal;
   font-family: 'DM Mono', monospace;
-  font-size: .78rem;
+  /* font-size: .625rem; */
   font-weight: 600;
   color: var(--ink);
 }
@@ -672,7 +730,7 @@ button{
   color: var(--ink);
 }
 .btn-secondary:hover{
-  border-color: var(--ink);
+  border-color: var(--rust);
   background: #fff;
 }
 .btn-secondary:focus-visible{
@@ -687,7 +745,7 @@ button{
 }
 .btn-primary:hover{
   background: var(--rust-dark);
-  border-color: var(--rust-dark);
+  border-color: var(--rust);
   box-shadow: var(--shadow-soft);
 }
 .btn-primary:focus-visible{
@@ -705,13 +763,13 @@ button{
 .wifi-field p,
 .wifi-field p span,
 .content-header,
-.welcome-text,
+.header-text,
 .action-buttons{
   min-width: 0;
 }
 
 /* desktop view */
-@media (min-width: 900px){
+@media (min-width: 990px){
 
   /* make sidebar fixed */
   .dashboard-container{
@@ -726,6 +784,7 @@ button{
   /*disable the mobile menu toggle buttons on desktop, since the sidebar is always visible */
   .menu-toggle, .menu-close{ display: none; }
 
+
    .sidebar-nav, .sidebar-footer{ display: block; }
   .sidebar.is-open{
     position: static;
@@ -735,7 +794,7 @@ button{
   }
 
   .main-content{
-    padding: 36px 40px 60px;
+    padding: 36px 40px 40px;
     max-width: 1100px;
   }
   .content-header{
@@ -745,29 +804,35 @@ button{
     gap: 20px;
   }
 
+  .header-text{
+  margin-bottom: 0;
+}
+.header-text h1{
+  font-size: 2.35rem;
+}
   /* switch fanning cards to a horizontal layout on desktop, with a gap between them. The cards will fan out slightly when hovered over, but that effect will be added in the next step. For now, just make sure they are laid out horizontally with a gap. */
   .fanning-cards-wrapper{
     position: relative;
     flex-direction: row;
     height: 420px;
     max-width: 700px;
-    margin: 0 auto 40px;
+    margin: 0 auto 80px;
     align-items: center;
     justify-content: center;
   }
    .card{
     position: absolute;
-    width: 400px;
+    width: 320px;
   }
   .receipt-card{
-    left: 10%;
-    transform: rotate(-6deg);
+    left: 7%;
+    transform: rotate(-5deg);
     z-index: 1;
     
   }
   .welcome-card{
-    right: 10%;
-    transform:  rotate(6deg);
+    right: 5%;
+    transform:  rotate(5deg);
     z-index: 2;
   }
    .fanning-cards-wrapper:hover .receipt-card{
@@ -782,5 +847,29 @@ button{
   .info-grid{
     display: grid;
     grid-template-columns: repeat(3, 1fr);
+    /* align-items: ; */
   }
+
+  .info-card{
+    padding: 16px;
+    width: 100%;
+    gap: 12px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .arrival-card, .breakfast-card{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+  }
+  /* .info-grid {
+    display: flex;
+    flex-direction: row;
+    gap: 18px;
+    margin-bottom: 32px;
+    align-items: top;
+
+  } */
+   .sidebar.is-open .menu-close{ display: none; }/* to remove the menu-close button on desktop, since the sidebar is always visible */
 }
